@@ -1,0 +1,71 @@
+@import "../styles/textures.css";
+@import "../styles/animations.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1C1008;
+  --surface: #241407;
+  --surface-elevated: #311B0A;
+  --copper: #B87333;
+  --bronze: #2C1A00;
+  --gold: #FFD700;
+  --silver: #C0C0C0;
+  --electric: #00BFFF;
+  --cream: #F5E8D0;
+  --muted: rgba(245, 232, 208, 0.68);
+  --font-space-grotesk: "Space Grotesk", "Sora", system-ui, sans-serif;
+  --font-inter: "Inter", "Geist", system-ui, sans-serif;
+  --font-plex-mono: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(184, 115, 51, 0.2), transparent 30rem),
+    radial-gradient(circle at 85% 6%, rgba(0, 191, 255, 0.12), transparent 25rem),
+    linear-gradient(180deg, #1C1008 0%, #140B05 52%, #1C1008 100%);
+  color: var(--cream);
+  font-family: var(--font-inter);
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: rgba(184, 115, 51, 0.65);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.premium-scrollbar {
+  scrollbar-color: rgba(184, 115, 51, 0.74) rgba(28, 16, 8, 0.8);
+}
+
+.chart-tooltip {
+  border: 1px solid rgba(184, 115, 51, 0.35) !important;
+  background: rgba(28, 16, 8, 0.96) !important;
+  color: #F5E8D0 !important;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+}

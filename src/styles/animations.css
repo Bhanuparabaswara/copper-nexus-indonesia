@@ -1,0 +1,30 @@
+@keyframes copper-shimmer {
+  0% { transform: translateX(-120%); opacity: 0; }
+  35% { opacity: 0.55; }
+  100% { transform: translateX(140%); opacity: 0; }
+}
+
+@keyframes vein-pulse {
+  0%, 100% { opacity: 0.32; filter: drop-shadow(0 0 8px rgba(184, 115, 51, 0.28)); }
+  50% { opacity: 0.9; filter: drop-shadow(0 0 22px rgba(255, 215, 0, 0.28)); }
+}
+
+@keyframes float-particle {
+  0% { transform: translate3d(0, 0, 0) scale(0.7); opacity: 0; }
+  18% { opacity: 0.72; }
+  100% { transform: translate3d(var(--x), -120vh, 0) scale(1.08); opacity: 0; }
+}
+
+@keyframes heat {
+  0%, 100% { transform: translateY(0) skewX(-4deg); opacity: 0.34; }
+  50% { transform: translateY(-8px) skewX(5deg); opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
